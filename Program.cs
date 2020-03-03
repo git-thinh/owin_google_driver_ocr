@@ -45,6 +45,7 @@ namespace owin_google_driver_ocr
             try
             {
                 string file = Path.GetFileName(ocr.Url);
+
                 ocr.FileName = file.Substring(0, file.Length - 4) + "_" + DateTime.Now.ToString("yyyyMMdd_HHmmss") + ".jpg";
 
                 file = Path.Combine(Program.PATH_OCR_IMAGE, ocr.FileName);
